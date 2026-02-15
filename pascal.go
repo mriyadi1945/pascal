@@ -9,9 +9,10 @@ func Pascal(col, row int) int {
 	return Pascal(col-1, row-1) + Pascal(col, row-1)
 }
 
-func PascalIterative(col, row int) {
-	for i := range 15 {
-		for j := 0; j <= 15-i; j++ {
+func PascalIterative(nilai int) {
+	n := nilai
+	for i := range n {
+		for j := 0; j <= n-i; j++ {
 			fmt.Print("  ")
 		}
 		for k := 0; k < i; k++ {
